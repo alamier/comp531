@@ -3,24 +3,104 @@
 <head>
 	<title>Pizza Order</title>
 	<meta charset="utf-8">
-	<meta author="Zhou Liu">
+	<meta name="author" content="Zhou Liu">
 </head>
 <body>
-	<h1>Pizza Guys Order Form</h1>
-	<img src="Pizza.jpg" style="width:480px;height:270px;border-radius:10px;">
-	<form method="post">
-		<p class="form-item-title" >Name</p>
-		<input type="text" name="name" required>
-		<p class="form-item-title">Add</p>
+	<div class="main-container">
+		<h1>Pizza Guys Order Form</h1>
+		<img src="Pizza.jpg" style="width:480px;height:270px;border-radius:10px;">
+		<div class="form-container">
+			<form method="post" id="pizza-form">
+			<p class="form-text-title" >Name</p>
+			<input class="form-text-input" type="text" name="name" required>
+			<p class="form-text-title">Address: #### Street Name ...</p>
+			<input class="form-text-input" type="text" name="address" required>
+			<p class="form-text-title">Phone Number e.g. 123-456-7890</p>
+			<input class="form-text-input" type="text" name="phone-number" required pattern="\d{3}-\d{3}-\d{4}">
 
-		<p><input type="submit" value="Place Order"></p>
+			<p class="form-radio-title">Pizza size</p>
+			<input type="radio" name="pizza-size" value="large" checked="checked"> Large
+			<input type="radio" name="pizza-size" value="medium"> Medium
+			<input type="radio" name="pizza-size" value="small"> Small
+
+			<p class="form-radio-title">Pizza Toppings</p>
+			<input type="checkbox" name="pizza-toppings" value="sausage"> Sausage
+			<input type="checkbox" name="pizza-toppings" value="pepperoni"> Pepperoni
+			<input type="checkbox" name="pizza-toppings" value="olives"> Olives
+			<input type="checkbox" name="pizza-toppings" value="anchovies"> Anchovies
+			<input type="checkbox" name="pizza-toppings" value="onions"> Onions
+
+			<input class="primaryBtn" type="submit" value="Place Order">
+			<button class="clearBtn" type="button" onclick="clearBtn()">Clear</button>
 	</form>
+		</div>
+		
+	</div>
+	
 </body>
 </html>
 
-<style type="text/css">
-.form-item-title{
-	font: 1.5em "Open Sans";
-}
+<script type="text/javascript">
+	function clearBtn() {
+		document.getElementById("pizza-form").reset();
+	}
+</script>
 
+<style type="text/css">
+.primaryBtn {
+	color:#fff;
+	background-color: #286090;
+	border-color: #204d74;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.primaryBtn:hover {
+	background-color: #0d95fc;
+}
+.clearBtn {
+	color: #900;
+	background-color: #eee;
+	border-color: #204d74;
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.clearBtn:hover {
+	color: #fff;
+	background-color: #b33630;
+}
+.form-text-input {
+	width: 458px;
+	padding: 9px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	margin: 0;
+}
+.form-container {
+	width: 480px;
+	padding: 0px;
+	border: 0px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main-container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.form-text-title {
+	font:bold 1.5em "Open Sans";
+}
+.form-radio-title {
+	font:bold 1.5em "Open Sans";
+	text-decoration: underline;
+}
 </style>
