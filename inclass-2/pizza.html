@@ -10,13 +10,13 @@
 		<h1>Pizza Guys Order Form</h1>
 		<img src="Pizza.jpg" style="width:480px;height:270px;border-radius:10px;">
 		<div class="form-container">
-			<form method="post" id="pizza-form">
+			<form method="get" action="./formProcessor.html" id="pizza-form">
 			<p class="form-text-title" >Name</p>
-			<input class="form-text-input" type="text" name="name" required>
+			<input class="form-text-input" type="text" name="name" placeholder="Your name" required>
 			<p class="form-text-title">Address: #### Street Name ...</p>
-			<input class="form-text-input" type="text" name="address" required>
+			<input class="form-text-input" type="text" name="address" placeholder="Delivery address" required>
 			<p class="form-text-title">Phone Number e.g. 123-456-7890</p>
-			<input class="form-text-input" type="text" name="phone-number" required pattern="\d{3}-\d{3}-\d{4}">
+			<input class="form-text-input" type="text" name="phone-number" placeholder="###-###-####" required pattern="\d{3}-\d{3}-\d{4}">
 
 			<p class="form-radio-title">Pizza size</p>
 			<input type="radio" name="pizza-size" value="large" checked="checked"> Large
@@ -30,24 +30,30 @@
 			<input type="checkbox" name="pizza-toppings" value="anchovies"> Anchovies
 			<input type="checkbox" name="pizza-toppings" value="onions"> Onions
 
-			<input class="primaryBtn" type="submit" value="Place Order">
-			<button class="clearBtn" type="button" onclick="clearBtn()">Clear</button>
-	</form>
+			<input class="primary-button" type="submit" onclick="return checkBoxValidate()" value="Place Order">
+			<button class="clear-button" type="button" onclick="clearBtn()">Clear</button>
+			</form>
 		</div>
-		
 	</div>
-	
 </body>
-</html>
+<script>
+	function checkBoxValidate(){
+		var chkBoxs = document.getElementsByName("pizza-toppings");
+		for(var i = 0; i <= chkBoxs.length - 1; i++) {
+			if(chkBoxs[i].checked == true) {
+				return true;
+			}
+		}
+		alert("Please choose at least one pizza topping");
+		return false;
+	}
 
-<script type="text/javascript">
 	function clearBtn() {
 		document.getElementById("pizza-form").reset();
 	}
 </script>
-
 <style type="text/css">
-.primaryBtn {
+.primary-button {
 	color:#fff;
 	background-color: #286090;
 	border-color: #204d74;
@@ -58,10 +64,10 @@
 	width: 100%;
 	margin-top: 20px;
 }
-.primaryBtn:hover {
+.primary-button:hover {
 	background-color: #0d95fc;
 }
-.clearBtn {
+.clear-button {
 	color: #900;
 	background-color: #eee;
 	border-color: #204d74;
@@ -72,7 +78,7 @@
 	width: 100%;
 	margin-top: 20px;
 }
-.clearBtn:hover {
+.clear-button:hover {
 	color: #fff;
 	background-color: #b33630;
 }
@@ -104,3 +110,4 @@
 	text-decoration: underline;
 }
 </style>
+</html>

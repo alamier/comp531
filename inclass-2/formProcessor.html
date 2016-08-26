@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formProcessor</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Zhou Liu">
+</head>
+<body>
+	<div id="table">
+		<h1>Pizza Order</h1>
+	</div>
+</body>
+<script>
+	var params = window.location.search.substring(1).split("&");
+	var keyValues = {};
+	params.forEach(function(keyValuePair) {
+		var key = decodeURIComponent(keyValuePair.split("=")[0]);
+		var value = decodeURIComponent(keyValuePair.split("=")[1].replace(/\+/g, " "));
+		if (!keyValues[key]) {
+			keyValues[key] = value;
+		} else {
+			keyValues[key] += ", " + value;
+		}
+	})
+
+	var tableHtml = "<table border='1'>";
+	for(k in keyValues){
+		tableHtml += "<tr>";
+		tableHtml += "<td>" + k + "</td>";
+		tableHtml += "<td>" + keyValues[k] + "</td>";
+		tableHtml += "</tr>";
+	}
+	tableHtml += "</table>";
+
+	document.getElementById("table").innerHTML += tableHtml;
+</script>
+</html>
