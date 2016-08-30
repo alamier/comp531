@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Zhou Liu">
+</head>
+<body  onload="setTimestamp()">
+	<div class="main-container">
+		<h1>Registration</h1>
+		<div class="form-container">
+			<form method="get" action="./formProcessor.html" id="registration-form">
+				<p class="form-text-title">Account Name <span class="span-alert">*</span></p>
+				<input class="form-text-input" type="text" name="account-name" placeholder="Your account name" required>
+				<p class="form-text-title">Display Name</p>
+				<input class="form-text-input" type="text" name="display-name" placeholder="Your display name (optional)">
+				<p class="form-text-title">Email Address <span class="span-alert">*</span></p>
+				<input class="form-text-input" type="email" name="email-address" placeholder="Email" required>
+				<p class="form-text-title">Phone Number <span class="span-alert">*</span></p>
+				<input class="form-text-input" type="text" name="phone-number" placeholder="123-456-7890" required pattern="\d{3}-\d{3}-\d{4}">
+				<p class="form-text-title">Date of Birth <span id="birthdateCheck" class="span-alert">*</span></p>
+				<input class="form-text-input" type="date" name="date-of-birth" id="date-of-birth" required>
+				<p class="form-text-title">Zipcode <span class="span-alert">*</span></p>
+				<input class="form-text-input" type="text" name="zipcode3" placeholder="12345 or 12345-1234" required= pattern="^\d{5}(-\d{4})?">
+				<p class="form-text-title">Password <span class="span-alert">*</span></p>
+				<input class="form-text-input" type="password" name="password" id="password" required>
+				<p class="form-text-title">Password Confirmation <span id="passwordCheck" class="span-alert">*</span></p>
+				<input class="form-text-input" type="password" name="password-confirmation" id="password-confirmation" required>
+				<input type="hidden" name="timestamp" id="timestamp" value="NaN">
+
+				<button class="clear-button" type="button" onclick="clearBtn()">Clear</button>
+				<input class="primary-button" type="submit" onclick="return formValidation()">
+			</form>
+		</div>
+
+	</div>
+</body>
+<script>
+	function setTimestamp() {
+		document.getElementById("timestamp").value = Date.now()
+	}
+
+	function clearBtn() {
+		document.getElementById("registration-form").reset();
+	}
+
+	function checkPasswordMatch() {
+		var password = document.getElementById("password").value;
+		var confirmPassword = document.getElementById("password-confirmation").value;
+
+		if (password != confirmPassword) {
+			document.getElementById("passwordCheck").innerHTML = "* <br>Password do not mathch!";
+			return false;
+		}else {
+			document.getElementById("passwordCheck").innerHTML = "*";
+			return true;
+		}
+	}
+
+	function checkDateOfBirth() {
+		var birthdayString = document.getElementById("date-of-birth").value;
+		var birthday = new Date(birthdayString);
+		var today = new Date();
+		var age = today.getFullYear() - birthday.getFullYear();
+		var monthDiff = today.getMonth() - birthday.getMonth();
+		if(monthDiff < 0 || (monthDiff ==0 && today.getDate() < birthday.getDate())){
+			age --;
+		}
+		var miniumAge = 18;
+		if(age >= miniumAge) {
+			document.getElementById("birthdateCheck").innerHTML = "*"
+			return true;
+		}else {
+			document.getElementById("birthdateCheck").innerHTML = "* <br>Only individuals 18 years of age or older on the day of registration are allowed to register!"
+			return false;
+		}
+	}
+
+	function formValidation() {
+		return checkPasswordMatch() && checkDateOfBirth();
+	}
+</script>
+<style>
+.primary-button {
+	color:#fff;
+	background-color: #286090;
+	border-color: #204d74;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.primary-button:hover {
+	background-color: #0d95fc;
+}
+.form-text-input {
+	width: 458px;
+	padding: 9px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	margin: 0;
+}
+.span-alert {
+	color:red;
+	font:normal 0.6em Arial;
+}
+.main-container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.form-container {
+	width: 480px;
+	padding: 0px;
+	border: 0px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-text-title {
+	font:bold 1.5em "Open Sans";
+}
+.clear-button {
+	color: #900;
+	background-color: #eee;
+	border-color: #204d74;
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.clear-button:hover {
+	color: #fff;
+	background-color: #b33630;
+}
+</style>
+</html>
