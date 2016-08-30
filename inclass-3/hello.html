@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Hello HTML!</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Zhou Liu">
+</head>
+<body onload="setTimeout(timeoutAlert, 5000)">
+	<div class="main-container">
+		<div class="title-container">
+			<img class="title-image" src="./title-image.png">
+		</div>
+
+		<div class="avatar-container">
+			<img alt=" Image" class="avatar" src="./photo.jpg"></img>
+		</div>
+		<div id="countdownDiv"></div>
+		<div class="profile-container">
+			<div class="name-container">
+				<p>
+					<strong>Zhou Liu</strong>
+					<br>
+					MCS Student at
+					<a href="http://rice.edu" style="text-decoration:none;color:#2a6496">Rice University</a>
+				</p>
+				<div class="links-container">
+					<a href="Mailto:zhou.liu@rice.edu" target="_blank" class="links-style">Email</a>
+				    <a href="https://twitter.com/liuzhouwork" target="_blank" class="links-style">Twitter</a>
+				    <a href="https://github.com/alamier" target="_blank" class="links-style">Github</a>
+				    <a href="https://www.linkedin.com/in/zhouliu?trk=hp-identity-name" target="_blank" class="links-style">Linkedin</a>
+				</div>
+			</div>
+		</div>
+		<div class="main-context-container">
+			<p>
+				I am in first year pursuing a Master of <em>Computer Science degree</em> <br>
+				here at Rice University. I just earned my Bachelor of Engineering <br>
+				degree in Computer Science and Technology from <b>Beijing University <br>
+				of Posts and Telecommunications</b>, and is looking for opportunities <br>
+				to hone my programming skills during my graduate study.</p>
+			<p>
+				America is great because of diversity, I come here for the purpose of  <br>
+				studying and working with people with all kinds of backgrounds. So please, <br> leave a comment below, we could have a drink sometime, on me!
+			</p>
+		</div>
+		<div class="comments-container">
+			<h2>Add a comment</h2>
+			<form accept-charset="UTF-8" class="form">
+				<p>
+					<label class="form-label">Name</label>
+					<br>
+					<input class="comment-editor" type="text">
+				</p>
+				<p>
+					<label class="form-label">Comment</label>
+					<br>
+					<textarea class="comment-body-editor"></textarea>
+				</p>
+				<br>
+				<button class="submit-btn">Submit Comment</button>
+			</form>
+			<br>
+			<button class="submit-btn" onclick="clearTextarea()">Clear Textarea</button>
+		</div>
+	</div>
+</body>
+<script >
+	var isPaused = false;
+	function timeoutAlert() {
+		var msg = "the page will redirect when the counter reaches zero";
+		alert(msg);
+		showCountdown()
+	}
+
+	function showCountdown() {
+		var countdownDiv = document.getElementById("countdownDiv");
+		countdownDiv.innerHTML = "<p>The page will redirect in <span id='indicator'></span> seconds</p>";
+		countdownDiv.innerHTML += "<div><button onclick='pauseCountdown()'>pause</button><button onclick='resumeCountdown()'>resume</button></div>";
+		startCountdown();
+	}
+
+	function pauseCountdown() {
+		isPaused = true;
+	}
+
+	function resumeCountdown() {
+		isPaused = false;
+	}
+
+	function startCountdown() {
+		var n = 15;
+		var indicator = document.getElementById("indicator");
+		indicator.innerHTML = n;
+		var id = setInterval(function(){
+			if(!isPaused){
+				n--;
+			}
+			indicator.innerHTML = + n;
+			if(n === 0){
+				clearInterval(id);
+				window.location = "http://www.clear.rice.edu/comp431/sample/hello.html";
+			}
+		},1000)
+	}
+
+	function clearTextarea() {
+		var textArea = document.getElementsByTagName("textarea")[0];
+		textArea.value = "";
+	}
+</script>
+<style type="text/css">
+	.submit-btn {
+		color: #fff;
+	    background-color: #286090;
+	    border-color: #204d74;
+	    border: 1px solid transparent;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    padding: 6px 12px;
+	    line-height: 1.428571429;
+	    font-size: 14px;
+	    width: 100%;
+	    height: 30px;
+	}
+	.comment-body-editor {
+		width: 100%;
+		height: 200px;
+		padding: 6px 12px;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		font-size: 15px;
+	}
+	.form-label {
+		font-family: Helvetica;
+		font-weight: bold;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	.comment-editor {
+		width: 100%;
+		padding: 0.3em 0.6em;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		font-size: 15px;
+	}
+	.form {
+		display: block;
+		margin-top: 0em;
+	}
+	.comments-container {
+		margin-left: auto;
+		margin-right: auto;
+		border-top: 1px solid #eee;
+		padding-top: 10px;
+		margin-top: 50px;
+		width: 65%;
+	}
+	.links-style {
+		text-decoration: none;
+		color: #8f65ca;
+	}
+	.links-container {
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		padding: 30px 0;
+	}
+	.name-container {
+		width: 80%;
+		margin-left: 10%;
+		text-align: center;
+	}
+	.profile-container {
+		width: 65%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding-bottom: 20px;
+	    font-size: 20px;
+	    font-family: Georgia;
+	    line-height: 1.6;
+	}
+	.title-container {
+		display: block;
+	}
+	.title-image {
+		width: 1024px;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.main-container {
+		display: block;
+	}
+	.avatar {
+	    width: 128px;
+	    height: 128px;
+	    border-radius: 200px;
+	}
+	.avatar-container {
+		margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	    margin-top: -60px;
+	    margin-bottom: 40px;
+	    width: auto;
+	    height: auto;
+	}
+	.main-context-container {
+		font-family: monospace;
+		font-size: 20px;
+		text-align: center;
+	}
+</style>
+</html>
