@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avoid the Mouse</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Zhou Liu">
+	<script src="avoid.js"></script>
+</head>
+<body>
+	<div id="canvas">
+		<button id="avoid-btn">Click Me</button>
+	</div>
+	<div id="result">
+		Congratulations!<br>
+		You won!
+	</div>
+</body>
+<style>
+	#avoid-btn {
+		position: relative;
+		height: 50px;
+		width: 50px;
+		border-radius: 20px;
+		background-image: url("background-image.jpg");
+		background-position: center;
+		background-size: 50px 50px;
+		border: 0px;
+	}
+
+	#result{
+		display: none;
+		text-align: center;
+		font-size: 25px;
+		color: #2770B8;
+		width: 300px;
+		margin: 1em auto;
+		border-width: 5px;
+		border-style: solid;
+		border-radius:5px;
+		border-color: #f40104;
+		background-color: #52ff00;
+	}
+
+	#canvas {
+		width: 400px;
+		height: 400px;
+		background-color: #f7f7f7;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+</html>
