@@ -38,7 +38,6 @@ var createApp = function(canvas) {
 
 		// add an object to the list
 		shapes.push(spe)
-		console.log("shapes数组长度：" + shapes.length)
 	}
 
 	//initialize car
@@ -60,13 +59,11 @@ var createApp = function(canvas) {
 	canvas.onclick = function(e) {
 		var x = e.clientX - c.canvas.offsetParent.offsetLeft;
 		var y = e.clientY - c.canvas.offsetParent.offsetTop;
-		console.log("坐标：" + x + ", " + y);
 
 		// find the building in reverse order so the one in front will be selceted
 		for(var i = shapes.length-1; i>=0; i--){
 			if(isClicked(shapes[i],x,y)){
 				shapes[i].blgHeight += windowHeight;
-				console.log("shape length: " + shapes[i].blgHeight)
 			}
 		}
 	}
@@ -142,6 +139,7 @@ window.onload = function() {
 	var app = createApp(document.querySelector("canvas"))
 	document.getElementById("build").onclick = app.build
 
+	// set the timer to update the frame
 	setInterval(paint, 33);
 }
 
