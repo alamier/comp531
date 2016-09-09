@@ -31,6 +31,14 @@ window.onload = function() {
 	images[3] =	document.getElementById("img-4");
 	images[4] =	document.getElementById("img-5");
 
+	// store the image sources in local
+	var imgSrcList = [];
+	imageSrcs.forEach(function(src){
+		var img = new Image();
+		img.src = src;
+		imgSrcList.push(img);
+	})
+
     // add onclick methods to buttons
 	for (var i=0; i < 5; i ++) {
 		btns[i] = images[i].nextElementSibling;

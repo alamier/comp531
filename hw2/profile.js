@@ -12,6 +12,12 @@ var phone_current// current value of phone number
 var zipcode_current// current value of zipcode
 var password_current// current value of password
 
+var displayName_new // new value of display name
+var email_new// new value of email
+var phone_new// new value of phone number 
+var zipcode_new// new value of zipcode
+var password_new// new value of password
+
 window.onload = function() {
 	displayName = document.getElementById("display-name");
 	email = document.getElementById("email-address");
@@ -20,11 +26,14 @@ window.onload = function() {
 	password = document.getElementById("password");
 	passwordConfirmation = document.getElementById("password-confirmation");
 
-	displayName_current = displayName.parentElement.nextElementSibling.innerText;
-	email_current = email.parentElement.nextElementSibling.innerText;
-	phone_current = phone.parentElement.nextElementSibling.innerText;
-	zipcode_current = zipcode.parentElement.nextElementSibling.innerText;
-	password_current = password.parentElement.nextElementSibling.innerText;
+	// update current values
+	updateCurrentValues();
+
+	displayName_new = "";
+	email_new = "";
+	phone_new = "";
+	zipcode_new = "";
+	password_new = "";
 
 	var updateBtn = document.getElementById("update-btn");
 	updateBtn.onclick = function() {
@@ -35,6 +44,15 @@ window.onload = function() {
 			clearInputs();
 		}
 	}
+}
+
+// update current values
+function updateCurrentValues() {
+	displayName_current = displayName.parentElement.nextElementSibling.innerText;
+	email_current = email.parentElement.nextElementSibling.innerText;
+	phone_current = phone.parentElement.nextElementSibling.innerText;
+	zipcode_current = zipcode.parentElement.nextElementSibling.innerText;
+	password_current = password.parentElement.nextElementSibling.innerText;
 }
 
 // reset all the inputs
@@ -49,19 +67,35 @@ function clearInputs() {
 
 // update the profile values with new values
 function updateProfile() {
-	displayName.parentElement.nextElementSibling.innerText = displayName_current;
-	email.parentElement.nextElementSibling.innerText = email_current;
-	phone.parentElement.nextElementSibling.innerText = phone_current;
-	zipcode.parentElement.nextElementSibling.innerText = zipcode_current;
-	password.parentElement.nextElementSibling.innerText = password_current;
+	if(displayName_new != ""){
+		displayName.parentElement.nextElementSibling.innerText = displayName_new;
+		displayName_new = "";
+	}
+	if(email_new != ""){
+		email.parentElement.nextElementSibling.innerText = email_new;
+		email_new = "";
+	}
+	if(phone_new != ""){
+		phone.parentElement.nextElementSibling.innerText = phone_new;
+		phone_new = "";
+	}
+	if(zipcode_new != ""){
+		zipcode.parentElement.nextElementSibling.innerText = zipcode_new;
+		zipcode_new = "";
+	}
+	if(password_new != ""){
+		password.parentElement.nextElementSibling.innerText = password_new;
+		password_new = "";
+	}
+	updateCurrentValues();
 }
 
 // do the validation 
 function validate() {
 	var msg = "";
 	if(displayName.value != "") {
-		displayName_current = displayName.value;
-		changeInfo += "Display name has been changed to " + displayName.value + "\n"
+		displayName_new = displayName.value;
+		changeInfo += "Display name has been changed to " + displayName.value+ ", old value is " + displayName_current + "\n"
 	}
 
 	if(email.value != "") {
@@ -69,8 +103,8 @@ function validate() {
 		if(!patt.test(email.value)) {
 			msg += "* The email-address should be in the form of name@example.com! <br>";
 		} else {
-			email_current = email.value;
-			changeInfo += "Email address has been changed to " + email.value + "\n"
+			email_new = email.value;
+			changeInfo += "Email address has been changed to " + email.value+ ", old value is " + email_current + "\n"
 		}
 	}
 
@@ -79,8 +113,8 @@ function validate() {
 		if (!patt.test(phone.value)) {
 			msg += "* Phone Number must be 10 digits! <br>";
 		} else {
-			phone_current = phone.value;
-			changeInfo += "Phone number has been changed to " + phone.value + "\n"
+			phone_new = phone.value;
+			changeInfo += "Phone number has been changed to " + phone.value+ ", old value is " + phone_current + "\n"
 		}
 	}
 
@@ -89,8 +123,8 @@ function validate() {
 		if (!patt.test(zipcode.value)) {
 			msg += "* Zip code must be 5 digits! <br>";
 		} else {
-			zipcode_current = zipcode.value
-			changeInfo += "Zip code has been changed to " + zipcode.value + "\n"
+			zipcode_new = zipcode.value
+			changeInfo += "Zip code has been changed to " + zipcode.value+ ", old value is " + zipcode_current + "\n"
 		}
 	}
 
@@ -98,8 +132,8 @@ function validate() {
 		if(password.value != passwordConfirmation.value){
 			msg += "* Password and password confirmation must match! <br>"
 		} else {
-			password_current = password.value;
-			changeInfo += "Password has been changed to " + password.value + "\n"
+			password_new = password.value;
+			changeInfo += "Password has been changed to " + password.value + ", old value is " + password_current + "\n"
 		}
 	}
 
