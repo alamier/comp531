@@ -35,11 +35,9 @@
                     //map store the result
                     var map = {};
                     var articles = json.articles
-                    for(var i=0; i < articles.length; i++){
-                        var count = articles[i].text.split(' ').length
-                        var id = articles[i]._id;
-                        map[id] = count
-                    }
+                    articles.forEach(a => {
+                        map[a._id] = a.text.split(' ').length
+                    })
                     //return the result
                     return map
                 })
@@ -54,11 +52,9 @@
                 return r.json().then(json =>{
                     var map = {};
                     var articles = json.articles
-                    for(var i=0; i < articles.length; i++){
-                        var count = articles[i].text.split(' ').length
-                        var id = articles[i]._id;
-                        map[id] = count
-                    }
+                    articles.forEach(a => {
+                        map[a._id] = a.text.split(' ').length
+                    })
                     return map
                 })
             } else {
@@ -78,14 +74,13 @@
                     var max = 0;
                     var maxID = "";
                     var articles = json.articles
-                    for(var i=0; i < articles.length; i++){
-                        var count = articles[i].text.split(' ').length
-                        var id = articles[i]._id;
+                    articles.forEach(a => {
+                        var count = a.text.split(' ').length;
                         if(count > max){
                             max = count
-                            maxID = id
+                            maxID = a._id
                         }
-                    }
+                    })
                     // transfer the result into a string
                     return maxID + ""
                 })
