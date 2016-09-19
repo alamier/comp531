@@ -1,0 +1,88 @@
+#log-email-info, #log-password-info {
+	color: red;
+}
+.menubar-right-container {
+	float: right;
+	color: white;
+	text-align: left;
+	padding-bottom: 14px;
+}
+.menubar-content-container {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.menubar-left-container {
+	float: left;
+}
+.site-name {
+	color: white;
+}
+.menubar-container {
+	height: 82px;
+	min-width: 980px;
+	background: #004080;
+}
+.register-image-container {
+	float: left;
+	width: 500px;
+}
+.register-image {
+	width:500px;
+	height: 295px;
+}
+.primary-button {
+	color:#fff;
+	background-color: #286090;
+	border-color: #204d74;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.primary-button:hover {
+	background-color: #0d95fc;
+}
+.form-text-input {
+	width: 350px;
+	padding: 9px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	margin: 0;
+}
+.span-alert {
+	color:red;
+	font:normal 0.6em Arial;
+}
+.main-container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.register-form-container {
+	float: right;
+	width: 350px;
+	padding: 0px;
+	border: 0px;
+	text-align: left;
+}
+.form-text-title {
+	font:bold 1.5em "Open Sans";
+}
+.clear-button {
+	color: #900;
+	background-color: #eee;
+	border-color: #204d74;
+	border: 1px solid #d5d5d5;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	width: 100%;
+	margin-top: 20px;
+}
+.clear-button:hover {
+	color: #fff;
+	background-color: #b33630;
+}

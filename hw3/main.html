@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feed</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Zhou Liu">
+	<script src="main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-static">
+		<div class="container">
+	    	<div class="navbar-header">
+	      		<a class="navbar-brand" href="#" target="ext"><b>Main Page</b></a>
+	      		<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        		<span class="glyphicon glyphicon-chevron-down"></span>
+	      		</a>
+	    	</div>
+		    <div class="navbar-collapse collapse">
+		        <ul class="nav navbar-right navbar-nav">
+		            <li class="dropdown">
+		           		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+		           		<ul class="dropdown-menu">
+		           			<li><input type="text" class="input-text" placeholder="Search Post"></li>
+		           			<li>
+		           				<button class="primary-button">Search</button>
+		           			</li>
+		             	</ul>
+		          	</li>
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		            		<i class="glyphicon glyphicon-user"></i> 
+		            		<i class="glyphicon glyphicon-chevron-down"></i>
+		            	</a>
+		            	<ul class="dropdown-menu">
+		                	<li><a href="index.html">Logout</a></li>
+		                	<li><a href="profile.html">Profile</a></li>
+		            	</ul>
+		            </li>
+		        </ul>
+		    </div>
+	    </div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<a href="profile.html">Profile page</a>
+			</div>
+
+			<div class="col-md-8">
+				<table id="card-table">
+					<tr>
+						<td>
+							<div class="img-card">
+								<img id="img-1" src="images/1.jpg">
+								<button class="card-button">Stop</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
