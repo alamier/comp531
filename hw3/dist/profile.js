@@ -112,7 +112,7 @@ function validate() {
 	}
 
 	if(phone.value != ""){
-		var patt = /\d{10}/;
+		var patt = /^\d{10}$/;
 		if (!patt.test(phone.value)) {
 			msg += "* Phone Number must be 10 digits! <br>";
 		} else {
@@ -122,7 +122,7 @@ function validate() {
 	}
 
 	if(zipcode.value != ""){
-		var patt = /\d{5}/;
+		var patt = /^\d{5}$/;
 		if (!patt.test(zipcode.value)) {
 			msg += "* Zip code must be 5 digits! <br>";
 		} else {
