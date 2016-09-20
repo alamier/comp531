@@ -22,7 +22,7 @@
 	<nav class="navbar navbar-static">
 		<div class="container">
 	    	<div class="navbar-header">
-	      		<a class="navbar-brand" href="#" target="ext"><b>Main Page</b></a>
+	      		<a class="navbar-brand" href="main.html" target="ext"><b>Ricebook</b></a>
 	      		<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	        		<span class="glyphicon glyphicon-chevron-down"></span>
 	      		</a>
@@ -55,21 +55,137 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2">
-				<a href="profile.html">Profile page</a>
+			<div class="col-md-3">
+				<div class="main-profile-container">
+					<img onclick="redirectToProfile()" class="main-profile-image" src="images/profile.jpg">
+					<h3>Zhou Liu</h1>
+					<p id="status-label">I'm learning JavaScript!</p>
+					<input class="input-text" type="text" id="status-input">
+					<button class="primary-button" onclick="updateStatus()">Update Status</button>
+				</div>
 			</div>
 
-			<div class="col-md-8">
+			<div class="col-md-7">
+				<div class="post-editor-container">
+					<label>Add Image<input type="file" name="add-image"></label>
+					<textarea class="post-editor" id="post-editor" placeholder="What's on your mind?"></textarea>
+					<button class="card-button-left">Post</button>
+					<button onclick="cancelPost()" class="card-button-right">Cancel</button>
+					<div class="clear"></div>
+				</div>
+
 				<table id="card-table">
 					<tr>
 						<td>
 							<div class="img-card">
 								<img id="img-1" src="images/1.jpg">
-								<button class="card-button">Stop</button>
+								<div class="card-text">Ea his case fugit pericula, mel no suas quodsi, exerci dissentias liberavisse usu no. Ignota vituperata ex cum. Pri et populo periculis gloriatur. Scaevola electram his no. Mea alia nobis veritus in. Et sed sapientem consulatu.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<div class="card-text">Vel impedit menandri eu, cu vim diam brute posse, eu porro etiam viderer nam. Nam suas dicant eu, ius stet voluptatum ei. Cum eu animal appetere lobortis. Has error aliquid pertinacia te, te mea propriae persecuti forensibus. Possim expetenda vel no, has ei wisi eirmod.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<img id="img-2" src="images/2.jpg">
+								<div class="card-text">An quot dolore consectetuer cum, invenire inciderint id sea. Mea in putent praesent, te usu nulla putent scripta. Ad postea reformidans est. Has ad solet persecuti referrentur, duo eu ponderum tacimates. Te nemore bonorum quo, per epicurei adolescens sententiae id.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<div class="card-text">Cu principes evertitur delicatissimi eos, sit tale nonumy possit ei, quot singulis an vis. Debet iuvaret dolores te pri, sint malorum necessitatibus ut nec. Ei sonet sententiae deterruisset quo, dicunt latine utroque vel te, alii convenire no nec. Appellantur disputationi in his. Ad his soleat mnesarchum, no erant dictas ceteros sea.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<img id="img-3" src="images/3.jpg">
+								<div class="card-text">Omnesque oporteat intellegam sit cu, harum ludus constituto eum in. Ne mel lorem alienum blandit, odio lorem hendrerit est te. Oporteat sensibus consequat an mel. Est no quaerendum consequuntur, duo ne quod primis integre. </div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<div class="card-text">Agam moderatius no vel, magna scripta dissentiunt eam ne, eu facer inciderint eloquentiam eum. At usu quas integre persius, cu sed tamquam virtute.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<img id="img-4" src="images/4.jpg">
+								<div class="card-text">Per numquam omittantur ea. Ei movet euismod nusquam pri. Detraxit senserit per id, te admodum dolores efficiendi sed, pro ex dicat consequuntur. Dicant efficiendi et mea. Ad sit ignota putent platonem, his offendit erroribus ei. Pro feugait detracto partiendo ad. Nec an vidisse equidem dolorem, vix an dictas nostrud tincidunt.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="img-card">
+								<div class="card-text">Soluta atomorum ius in. Ei sed affert laoreet, ad natum laoreet moderatius his, pri debet clita at. Pro an malis atomorum convenire, ex mea paulo graeci, vis decore denique ocurreret ad. Duo odio prompta te, nam doctus impedit in. Cetero accusam omittantur id mei.</div>
+								<button class="card-button-left">Edit</button>
+								<button class="card-button-right">Comment</button>
+								<div class="clear"></div>
 							</div>
 						</td>
 					</tr>
 				</table>
+			</div>
+			<div class="col-md-2">
+				<div class="users-container">
+					<div class="user-container">
+						<img src="images/user1.jpg">
+						<h4>Pikachu</h4>
+						<p>Pika Pika!</p>
+						<button class="alert-button">Unfollow</button>
+					</div>
+					<div class="user-container">
+						<img src="images/user2.jpg">
+						<h4>Squirtle</h4>
+						<p>I like swiming!</p>
+						<button class="alert-button">Unfollow</button>
+					</div>
+					<div class="user-container">
+						<img src="images/user3.jpeg">
+						<h4>Bulbasaur</h4>
+						<p>I refuse to envolve!</p>
+						<button class="alert-button">Unfollow</button>
+					</div>
+				</div>
+				<div class="add-user-container">
+					<input class="input-text" type="text" id="add-user" placeholder="User">
+					<button class="primary-button">Add User</button>
+				</div>
 			</div>
 		</div>
 	</div>

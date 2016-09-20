@@ -5,45 +5,95 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Zhou Liu">
 	<script src="profile.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<div><a href="main.html">Main page</a></div>
-	<div class="profile-container">
-		<table id="profile-table">
-			<tr>
-				<td>Display name</td>
-				<td><input type="text" id="display-name"></td>
-				<td>Zhou Liu</td>
-			</tr>
-			<tr>
-				<td>Email Address</td>
-				<td><input type="text" id="email-address"></td>
-				<td>zhou.liu@rice.edu</td>
-			</tr>
-			<tr>
-				<td>Phone number</td>
-				<td><input type="text" id="phone-number"></td>
-				<td>1231231234</td>
-			</tr>
-			<tr>
-				<td>Zip Code</td>
-				<td><input type="text" id="zip-code"></td>
-				<td>77005</td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="password" id="password"></td>
-				<td>1234</td>
-			</tr>
-			<tr>
-				<td>Password Confirmation</td>
-				<td><input type="password" id="password-confirmation"></td>
-				<td></td>
-			</tr>
-		</table>
-		<div id="show-result"></div>
-		<button class="primary-button" id="update-btn">Update</button>
+	<nav class="navbar navbar-static">
+		<div class="container">
+	    	<div class="navbar-header">
+	      		<a class="navbar-brand" href="main.html" target="ext"><b>Main Page</b></a>
+	      		<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        		<span class="glyphicon glyphicon-chevron-down"></span>
+	      		</a>
+	    	</div>
+		    <div class="navbar-collapse collapse">
+		        <ul class="nav navbar-right navbar-nav">
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		            		<i class="glyphicon glyphicon-user"></i> 
+		            		<i class="glyphicon glyphicon-chevron-down"></i>
+		            	</a>
+		            	<ul class="dropdown-menu">
+		                	<li><a href="index.html">Logout</a></li>
+		            	</ul>
+		            </li>
+		        </ul>
+		    </div>
+	    </div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div>
+					<img onclick="redirectToProfile()" class="main-profile-image" src="images/profile.jpg">
+					<p>Upload new picture<input type="file" name="add-image"></p>
+				</div>
+				<div>
+					<h1>Current Info</h1>
+					<p id="display-name-label">Zhou Liu</p>
+					<p id="email-address-label">zhou.liu@rice.edu</p>
+					<p id="phone-number-label">1231231234</p>
+					<p id="zip-code-label">77005</p>
+					<p id="date-of-birth">1995-02-08</p>
+					<p id="password-label" style="display:none;">1234</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="change-info-container">
+				</div>
+				<div class="profile-container">
+					<table id="profile-table">
+						<tr>
+							<td>Display name</td>
+							<td><input class="table-input-text" type="text" id="display-name"></td>
+						</tr>
+						<tr>
+							<td>Email Address</td>
+							<td><input class="table-input-text" type="text" id="email-address"></td>
+						</tr>
+						<tr>
+							<td>Phone number</td>
+							<td><input class="table-input-text" type="text" id="phone-number"></td>
+						</tr>
+						<tr>
+							<td>Zip Code</td>
+							<td><input class="table-input-text" type="text" id="zip-code"></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input class="table-input-text" type="password" id="password"></td>
+						</tr>
+						<tr>
+							<td>Password Confirmation</td>
+							<td><input class="table-input-text" type="password" id="password-confirmation"></td>
+							<td></td>
+						</tr>
+					</table>
+					<div id="show-result"></div>
+					<button class="primary-button" id="update-btn">Update</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

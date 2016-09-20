@@ -37,9 +37,12 @@ window.onload = function() {
 
 	var updateBtn = document.getElementById("update-btn");
 	updateBtn.onclick = function() {
+		var changeInfoContainer = document.getElementById("change-info-container");
+		changeInfoContainer.style.display = "none";
 		changeInfo = "";
 		if(validate() && changeInfo != "") {
-			alert(changeInfo);
+			changeInfoContainer.innerText=changeInfo;
+			changeInfoContainer.style.display = "block";
 			updateProfile();
 			clearInputs();
 		}
@@ -48,11 +51,11 @@ window.onload = function() {
 
 // update current values
 function updateCurrentValues() {
-	displayName_current = displayName.parentElement.nextElementSibling.innerText;
-	email_current = email.parentElement.nextElementSibling.innerText;
-	phone_current = phone.parentElement.nextElementSibling.innerText;
-	zipcode_current = zipcode.parentElement.nextElementSibling.innerText;
-	password_current = password.parentElement.nextElementSibling.innerText;
+	displayName_current = document.getElementById("display-name-label").innerText;
+	email_current = document.getElementById("email-address-label").innerText;
+	phone_current = document.getElementById("phone-number-label").innerText;
+	zipcode_current = document.getElementById("zip-code-label").innerText;
+	password_current = document.getElementById("password-label").innerText;
 }
 
 // reset all the inputs
@@ -68,23 +71,23 @@ function clearInputs() {
 // update the profile values with new values
 function updateProfile() {
 	if(displayName_new != ""){
-		displayName.parentElement.nextElementSibling.innerText = displayName_new;
+		document.getElementById("display-name-label").innerText = displayName_new;
 		displayName_new = "";
 	}
 	if(email_new != ""){
-		email.parentElement.nextElementSibling.innerText = email_new;
+		document.getElementById("email-address-label").innerText = email_new;
 		email_new = "";
 	}
 	if(phone_new != ""){
-		phone.parentElement.nextElementSibling.innerText = phone_new;
+		document.getElementById("phone-number-label").innerText = phone_new;
 		phone_new = "";
 	}
 	if(zipcode_new != ""){
-		zipcode.parentElement.nextElementSibling.innerText = zipcode_new;
+		document.getElementById("zip-code-label").innerText = zipcode_new;
 		zipcode_new = "";
 	}
 	if(password_new != ""){
-		password.parentElement.nextElementSibling.innerText = password_new;
+		document.getElementById("password-label").innerText = password_new;
 		password_new = "";
 	}
 	updateCurrentValues();
