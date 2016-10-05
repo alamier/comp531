@@ -1,0 +1,19 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "COMP 531 HW4",
+  "main": "./index.html",
+  "scripts": {
+    "deploy": "surge -p dist",
+    "start": "cd dist && (python -m SimpleHTTPServer 8080 || python -m http.server 8080)"
+  },
+  "author": "Zhou Liu",
+  "license": "MIT",
+  "devDependencies": {
+    "surge": "^0.18.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.1"
+  }
+}

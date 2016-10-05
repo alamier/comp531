@@ -5,6 +5,11 @@
 body{
     font: normal normal 16px/30px arial,"微软雅黑"; 
 }
+#instructions{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 #container{
     text-align: center;
     width: 320px;
