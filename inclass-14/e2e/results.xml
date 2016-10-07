@@ -1,0 +1,9 @@
+
+> starter@1.0.0 e2e:base /Users/zhou/Desktop/COMP531/inclass-14
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="3" failures="0" errors="0" skipped="0" timestamp="Fri, 07 Oct 2016 03:49:51 GMT" time="7.511">
+<testcase classname="Test Dummy Server Example Page" name="should log in as the test user" time="0.543"/>
+<testcase classname="Test Dummy Server Example Page" name="Update the headline and verify the change" time="1.581"/>
+<testcase classname="shutdown" name="now" time="0.107"/>
+</testsuite>
