@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { updateHeadline } from '../profile/profileActions'

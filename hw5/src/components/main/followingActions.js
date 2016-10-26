@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import Promise from 'bluebird'
 import Action, { resource, updateError } from '../../actions'
 

@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import { combineReducers } from 'redux'
 import Action from './actions'
 
@@ -52,7 +55,7 @@ function profile(state = { username:'', headline: '', avatar: '', zipcode: '', e
     }
 }
 
-// reducers for changing message, navigation state
+// reduces
 function common(state = { error:'', success:'', location:'' }, action) {
     const clean = { error: '', success: '' }
     switch (action.type) {

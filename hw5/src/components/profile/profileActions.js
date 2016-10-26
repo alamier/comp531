@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import Action, { updateError, resource } from '../../actions'
 
 export function validateProfile({username, email, zipcode, password, pwconf}) {
@@ -23,7 +26,6 @@ export function validateProfile({username, email, zipcode, password, pwconf}) {
         if (password !== pwconf) {
             return 'Password do not match'
         }
-        // enforce strong passwords!
     }
 
     return ''

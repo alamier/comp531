@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import React, { Component, PropTypes } from 'react'
 
 class ContentEditable extends Component {

@@ -1,3 +1,6 @@
+/**
+ * Created by zhou on 10/23/16.
+ */
 import Action, { resource, updateError, updateSuccess, navToMain, navToOut, apiUrl } from '../../actions'
 
 import { fetchFollowers } from '../main/followingActions'
