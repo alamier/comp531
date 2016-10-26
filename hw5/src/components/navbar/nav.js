@@ -13,8 +13,7 @@ const Nav = ({username, onProfile, dispatch}) => {
         <nav className="navbar navbar-static">
             <div className="container">
                 <div className="navbar-header">
-                    <a className="navbar-brand" href="#" onClick={() => {
-                        dispatch(navToMain())}}><b>Ricebook</b></a>
+                    <a className="navbar-brand" href="#"><b>Ricebook</b></a>
                     <a className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span className="glyphicon glyphicon-chevron-down"></span>
                     </a>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/article/article.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/article/</a> article.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.32% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.62% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/41</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">13 statements, 4 functions, 19 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by zhou on 10/23/16.
+ */
+import moment from 'moment'
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+&nbsp;
+import Comment from './comment'
+import ContentEditable from './contentEditable'
+import { editArticle } from './articleActions'
+&nbsp;
+class Article extends Component {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(props) <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span></span></span>
+    super(props)
+<span class="cstat-no" title="statement not covered" >    t</span>his.hideComments = true
+<span class="cstat-no" title="statement not covered" >    t</span>his.disabled = true
+<span class="cstat-no" title="statement not covered" >    t</span>his.addComment = false
+<span class="cstat-no" title="statement not covered" >    t</span>his.newComment = ''
+  }
+&nbsp;
+  //article display structure
+  render() <span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    c</span>onst date = moment(new Date(this.props.date))
+<span class="cstat-no" title="statement not covered" >    r</span>eturn (
+        &lt;div className="article-continer"&gt;
+          &lt;div className="article-author-container"&gt;
+            &lt;img className="article-author-image" src={ this.props.avatar }/&gt;
+            &lt;b&gt;{this.props.author}&lt;/b&gt; on {date.format('MM-DD-YYYY')} at {date.format('HH:mm:ss')}
+          &lt;/div&gt;
+          &lt;div className="img-card"&gt;
+            &lt;img className="img-card-image" src={this.props.img}/&gt;
+            &lt;div className="card-text"&gt;
+            &lt;ContentEditable html={this.props.text}
+              contentEditable={this.props.username == this.props.author}
+              tooltip={this.props.username == this.props.author ? 'click to edit' : ''}
+              onChange={<span class="fstat-no" title="function not covered" >(e) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              t</span>his.newMessage = e.target.value
+<span class="cstat-no" title="statement not covered" >              t</span>his.disabled = this.props.text == this.newMessage
+<span class="cstat-no" title="statement not covered" >              t</span>his.forceUpdate()
+              }}/&gt;
+            &lt;/div&gt;
+            { // show the edit button if the author is the same as current user
+              this.props.author == this.props.username ?
+                &lt;div&gt;
+                  &lt;button className="card-button-3-left" onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    t</span>his.hideComments = !this.hideComments
+<span class="cstat-no" title="statement not covered" >                    t</span>his.forceUpdate()
+                  }}&gt;{ this.hideComments ? 'Show' : 'Hide' } Comments ({ this.props.comments.length })&lt;/button&gt;
+                  &lt;button className="card-button-3-mid" onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    this.addComment = !this.addComment; <span class="cstat-no" title="statement not covered" >t</span></span>his.forceUpdate()
+                  }}&gt;{ this.addComment ? 'Cancel' : 'Comment' }&lt;/button&gt;
+                  &lt;button className="card-button-3-right" disabled={this.disabled} onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    t</span>his.props.dispatch(editArticle(this.props._id, this.newMessage))
+<span class="cstat-no" title="statement not covered" >                    t</span>his.disabled = true
+<span class="cstat-no" title="statement not covered" >                    t</span>his.forceUpdate()
+                    }}&gt;Edit&lt;/button&gt;
+                  &lt;div className="clear"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              :
+                &lt;div&gt;
+                  &lt;button className="card-button-2" onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    t</span>his.hideComments = !this.hideComments
+<span class="cstat-no" title="statement not covered" >                    t</span>his.forceUpdate()
+                  }}&gt;{ this.hideComments ? 'Show' : 'Hide' } Comments ({ this.props.comments.length })&lt;/button&gt;
+                  &lt;button className="card-button-2-right" onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    this.addComment = !this.addComment; <span class="cstat-no" title="statement not covered" >t</span></span>his.forceUpdate()
+                  }}&gt;{ this.addComment ? 'Cancel' : 'Comment' }&lt;/button&gt;
+                  &lt;div className="clear"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            }
+&nbsp;
+            { !this.addComment ? '' :
+                  &lt;div&gt;
+              &lt;textarea className="newPostText"
+                        cols="80" rows="4" placeholder="your comment"
+                        value={this.newComment}
+                        onChange={<span class="fstat-no" title="function not covered" >(e) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                          t</span>his.newComment = e.target.value
+<span class="cstat-no" title="statement not covered" >                          t</span>his.forceUpdate()
+                        }}&gt;
+              &lt;/textarea&gt;
+                    &lt;label className="btn btn-success"
+                           disabled={ this.newComment.length == 0 }
+                           onClick={<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                             if (this.newComment.length &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >                               t</span>his.props.dispatch(editArticle(this.props._id, this.newComment, -1))
+<span class="cstat-no" title="statement not covered" >                             t</span>his.newComment = ''
+<span class="cstat-no" title="statement not covered" >                             t</span>his.addComment = false
+<span class="cstat-no" title="statement not covered" >                             t</span>his.forceUpdate()
+                           }}&gt;
+                      Make the comment
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+            }
+&nbsp;
+            { // logic for show/hide comments
+              this.hideComments ? '' : this.props.comments.sort(<span class="fstat-no" title="function not covered" >(a,b) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >              if (a.date &lt; b.date)</span>
+<span class="cstat-no" title="statement not covered" >                r</span>eturn 1
+<span class="cstat-no" title="statement not covered" >              if (a.date &gt; b.date)</span>
+<span class="cstat-no" title="statement not covered" >                r</span>eturn -1
+<span class="cstat-no" title="statement not covered" >              r</span>eturn 0
+            }).map(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span></span>comment) =&gt;
+                &lt;Comment key={comment.commentId} articleId={this.props._id} username={this.props.username}
+                         commentId={comment.commentId} author={comment.author} date={comment.date}
+                         text={comment.text} avatar={comment.avatar} /&gt;
+            )}
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+  )}
+}
+&nbsp;
+Article.propTypes = {
+  _id: PropTypes.number.isRequired,
+  author: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  date: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  img: PropTypes.string,
+  comments: PropTypes.arrayOf(PropTypes.shape({
+    ...Comment.propTypes
+  }).isRequired).isRequired
+}
+&nbsp;
+export default connect()(Article)
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:51:09 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

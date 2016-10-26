@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/actions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> actions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/19</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by zhou on 10/23/16.
+ */
+import fetch from 'isomorphic-fetch'
+&nbsp;
+const isLocal = false
+export const apiUrl = i</span>sLocal ? <span class="branch-0 cbranch-no" title="branch not covered" >'http://localhost:3000' : 'https://webdev-dummy.herokuapp.com'
+&nbsp;
+// Action enum
+const Action = {
+&nbsp;
+     ADD_ARTICLE: 'ADD_ARTICLE'
+    ,UPDATE_ARTICLES: 'UPDATE_ARTICLES'
+    ,EDIT_ARTICLE: 'EDIT_ARTICLE'
+    ,SEARCH_KEYWORD: 'SEARCH_KEYWORD'
+    ,UPDATE_AVATARS: 'UPDATE_AVATARS'
+&nbsp;
+    ,UPDATE_HEADLINE: 'UPDATE_HEADLINE'
+    ,UPDATE_PROFILE: 'UPDATE_PROFILE'
+&nbsp;
+    ,FOLLOWER_UPDATE: 'FOLLOWER_UPDATE'
+&nbsp;
+    ,ERROR: 'ERROR'
+    ,SUCCESS: 'SUCCESS'
+&nbsp;
+    ,NAV_PROFILE: 'NAV_PROFILE'
+    ,NAV_MAIN: 'NAV_MAIN'
+    ,NAV_OUT: 'NAV_OUT'
+&nbsp;
+    ,LOGIN_LOCAL: 'LOGIN_LOCAL'
+}
+&nbsp;
+export default Action
+&nbsp;
+// action generator
+export <span class="fstat-no" title="function not covered" >function updateError(error) {</span> <span class="cstat-no" title="statement not covered" >r</span>eturn { type: Action.ERROR, error }}
+export <span class="fstat-no" title="function not covered" >function updateSuccess(success) {</span> <span class="cstat-no" title="statement not covered" >r</span>eturn { type: Action.SUCCESS, success }}
+export <span class="fstat-no" title="function not covered" >function navToProfile() {</span> <span class="cstat-no" title="statement not covered" >r</span>eturn { type: Action.NAV_PROFILE }}
+export <span class="fstat-no" title="function not covered" >function navToMain() {</span> <span class="cstat-no" title="statement not covered" >r</span>eturn { type: Action.NAV_MAIN }}
+export <span class="fstat-no" title="function not covered" >function navToOut() {</span> <span class="cstat-no" title="statement not covered" >r</span>eturn { type: Action.NAV_OUT }}
+&nbsp;
+// resource function
+export function resource(method, endpoint, payload, submitJson = true) <span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >{</span></span>
+    const options = {credentials: 'include', method}
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (submitJson) options.headers = {'Content-Type': 'application/json'}
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (payload) {
+<span class="cstat-no" title="statement not covered" >        o</span>ptions.body = submitJson ? JSON.stringify(payload) : payload
+    }
+&nbsp;
+    return fetch(`${apiUrl}/${endpoint}`, options)
+    .then(<span class="fstat-no" title="function not covered" >(response) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (response.status == 401) {</span>
+<span class="cstat-no" title="statement not covered" >            c</span>onst message = `Error in ${method} ${endpoint} ${JSON.stringify(response.json())}`
+<span class="cstat-no" title="statement not covered" >            t</span>hrow new Error(message)
+        } else {
+<span class="cstat-no" title="statement not covered" >            r</span>eturn response.json()
+        }
+    })
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:51:09 GMT-0500 (CDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
