@@ -2,7 +2,7 @@
  * Created by zhou on 10/25/16.
  */
 import {expect} from 'chai'
-import {validateProfile, updateHeadline} from './profileActions'
+import {validateProfile} from './profileActions'
 
 describe('Test the validateProfile', () => {
     it('should return Invalid username', () => {

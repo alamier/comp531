@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">29.17% </span>
+        <span class="strong">41.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/72</span>
+        <span class='fraction'>30/72</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">18.18% </span>
+        <span class="strong">48.48% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>6/33</span>
+        <span class='fraction'>16/33</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">11.76% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20.34% </span>
+        <span class="strong">35.59% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/59</span>
+        <span class='fraction'>21/59</span>
       </div>
       <div class='fl pad1y'>
         <span class="strong">1 branch</span>
@@ -151,35 +151,33 @@
 102
 103
 104
-105
-106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+105</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -263,29 +261,28 @@
 import Action, { updateError, resource } from '../../actions'
 &nbsp;
 export function validateProfile({username, email, zipcode, password, pwconf}) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (username) {
+    if (username) {
         <span class="missing-if-branch" title="else path not taken" >E</span>if (!username.match('^[a-zA-Z][a-zA-Z0-9]+')) {
             return 'Invalid username.  Must start with a letter and can only contains letters and numbers.'
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (email) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!email.match('^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z][a-zA-Z]+$')) {</span>
-<span class="cstat-no" title="statement not covered" >            r</span>eturn 'Invalid email.  Must be like a@b.co'
+    if (email) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!email.match('^[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z][a-zA-Z]+$')) {
+            return 'Invalid email.  Must be like a@b.co'
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (zipcode) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!zipcode.match('^[0-9]{5}$')) {</span>
-<span class="cstat-no" title="statement not covered" >            r</span>eturn 'Invalid zipcode.  Must be 5 digits in length, e.g., 77005'
+    if (zipcode) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!zipcode.match('^[0-9]{5}$')) {
+            return 'Invalid zipcode.  Must be 5 digits in length, e.g., 77005'
         }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (password || pwconf) {</span>
-<span class="cstat-no" title="statement not covered" >        if (password !== pwconf) {</span>
-<span class="cstat-no" title="statement not covered" >            r</span>eturn 'Password do not match'
+    <span class="missing-if-branch" title="else path not taken" >E</span>i</span>f (password || <span class="branch-1 cbranch-no" title="branch not covered" >pwconf) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (password !== pwconf) {
+            return 'Password do not match'
         }
-        // enforce strong passwords!
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    r</span>eturn ''
@@ -368,7 +365,7 @@ export <span class="fstat-no" title="function not covered" >function uploadImage
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Oct 25 2016 23:51:09 GMT-0500 (CDT)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 26 2016 01:49:59 GMT-0500 (CDT)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
