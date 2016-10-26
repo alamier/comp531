@@ -4,6 +4,7 @@ import Action, { resource, updateError } from '../../actions'
 export function delFollower(name) { return fetchFollowers('DELETE', name) }
 export function addFollower(name) { return fetchFollowers('PUT', name) }
 
+// logic for fetching followers data from the dummy server
 export function fetchFollowers(method, name) {
     return (dispatch, getState) => {
         if (method == 'PUT' && getState().followers.followers[name]) {

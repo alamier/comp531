@@ -8,6 +8,7 @@ const Messages_ = ({error, success}) => (
      <div className="row">
         <div className="col-sm-10">
             { error.length == 0 ? '' :
+                // error message
                 <div className="alert alert-danger">
                     <div className="col-sm-1"></div>
                     <div className="col-sm-10" id="errorMessage">{error}</div>
@@ -16,6 +17,7 @@ const Messages_ = ({error, success}) => (
                 </div>
             }
             { success.length == 0 ? '' :
+                // success message
                 <div className="alert alert-success">
                     <div className="col-sm-1"></div>
                     <div className="col-sm-10" id="successMessage">{success}</div>

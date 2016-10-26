@@ -5,6 +5,7 @@ import { localLogin } from './authActions'
 
 const Login = ({dispatch}) => {
     let username, password
+    // login form, login form is attached with the navigation bar
     return (
     <div className="menubar-container">
         <div className="menubar-content-container">

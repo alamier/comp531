@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import Action from './actions'
 
+// reducers for changing the state in the store
 function followers(state = { followers: {} }, action) {
     switch(action.type) {
         case Action.FOLLOWER_UPDATE:
@@ -51,6 +52,7 @@ function profile(state = { username:'', headline: '', avatar: '', zipcode: '', e
     }
 }
 
+// reducers for changing message, navigation state
 function common(state = { error:'', success:'', location:'' }, action) {
     const clean = { error: '', success: '' }
     switch (action.type) {

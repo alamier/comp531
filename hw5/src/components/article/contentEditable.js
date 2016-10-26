@@ -7,6 +7,7 @@ class ContentEditable extends Component {
         this.emitChange = this.emitChange.bind(this)
     }
 
+    // show the comment editor
     render() {
         return <div className={this.props.className}
             onInput={this.emitChange}

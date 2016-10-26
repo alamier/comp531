@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { updateHeadline } from '../profile/profileActions'
 
+// headline component
 class Headline extends Component {
 
     render() { return (
@@ -38,7 +39,9 @@ class Headline extends Component {
                         onChange={() => this.forceUpdate()} />
                 </div>
 
-            { !(this.newHeadline && this.newHeadline.value.length > 0) ? '' :
+            {
+                // if new headline is valid
+                !(this.newHeadline && this.newHeadline.value.length > 0) ? '' :
                 <div className="col-sm-12">
                     <input className="btn btn-primary"
                         type="button" value="Update your Headline"

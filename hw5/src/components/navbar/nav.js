@@ -17,10 +17,12 @@ const Nav = ({username, onProfile, dispatch}) => {
                     </a>
                 </div>
                 {
+                    // if user is logged in
                     username.length == 0 ? '' :
                         <div className="navbar-collapse collapse">
                             <ul className="nav navbar-right navbar-nav">
                                 {
+                                    // if user is on profile page
                                     onProfile ? '' :
                                         <li className="dropdown">
                                             <a href="#" className="dropdown-toggle" data-toggle="dropdown"><i

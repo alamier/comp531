@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import { addFollower, delFollower, dispatch } from './followingActions'
 
+// followers display structure
 const Follower = ({name, avatar, headline, dispatch}) => (
     <div className="users-container" name="follower">
         <div className="user-container">
@@ -14,6 +15,7 @@ const Follower = ({name, avatar, headline, dispatch}) => (
     </div>
 )
 
+// props of followers
 Follower.propTypes = {
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
@@ -24,7 +26,8 @@ Follower.propTypes = {
 class Following extends Component {
     render() { return (
             <div>
-                { Object.keys(this.props.followers).sort().map((f) => this.props.followers[f]).map((follower) =>
+                {   // display followers
+                    Object.keys(this.props.followers).sort().map((f) => this.props.followers[f]).map((follower) =>
                     <Follower key={follower.name}
                         name={follower.name} avatar={follower.avatar} headline={follower.headline}
                         dispatch={this.props.dispatch} />
@@ -37,7 +40,8 @@ class Following extends Component {
                         onChange={(e) => {
                             this.forceUpdate()
                         }}/>
-                { !(this.newFollower && this.newFollower.value && this.newFollower.value.length > 0) ? '' :
+                {   // add new followers
+                    !(this.newFollower && this.newFollower.value && this.newFollower.value.length > 0) ? '' :
                     <input className="btn btn-primary" type="button"
                         onClick={() => {
                             this.props.dispatch(addFollower(this.newFollower.value))

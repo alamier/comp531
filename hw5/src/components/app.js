@@ -8,7 +8,7 @@ import Profile from './profile/profile'
 
 const App = ({location}) => {
 
-    // routing
+    // routing logic to determine which view to display.
     let view
     switch(location) {
         case 'main': view = <Main/>; break;
@@ -16,6 +16,7 @@ const App = ({location}) => {
         default: view = <Landing/>; break;
     }
 
+    //site structure: app -> nav + view -> (main | profile | login)
     return (
         <div>
             <Nav/>

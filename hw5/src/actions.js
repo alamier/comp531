@@ -3,6 +3,7 @@ import fetch from 'isomorphic-fetch'
 const isLocal = false
 export const apiUrl = isLocal ? 'http://localhost:3000' : 'https://webdev-dummy.herokuapp.com'
 
+// Action enum
 const Action = {
 
      ADD_ARTICLE: 'ADD_ARTICLE'
@@ -28,12 +29,14 @@ const Action = {
 
 export default Action
 
+// action generator
 export function updateError(error) { return { type: Action.ERROR, error }}
 export function updateSuccess(success) { return { type: Action.SUCCESS, success }}
 export function navToProfile() { return { type: Action.NAV_PROFILE }}
 export function navToMain() { return { type: Action.NAV_MAIN }}
 export function navToOut() { return { type: Action.NAV_OUT }}
 
+// resource function
 export function resource(method, endpoint, payload, submitJson = true) {
     const options = {credentials: 'include', method}
     if (submitJson) options.headers = {'Content-Type': 'application/json'}

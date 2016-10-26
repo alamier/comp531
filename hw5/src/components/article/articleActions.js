@@ -1,5 +1,6 @@
 import Action, { resource } from '../../actions'
 
+// logic for fetching articles from the dummy server
 export function fetchArticles() {
     return (dispatch, getState) => {
         resource('GET', 'articles')

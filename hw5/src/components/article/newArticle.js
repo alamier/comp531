@@ -19,6 +19,7 @@ class NewArticle extends Component {
             reader.readAsDataURL(this.file)
     }
 
+    // new article editor
     render() { return (
         <div>
             <div className="row">

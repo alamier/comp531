@@ -4,6 +4,7 @@ import Headline from './headline'
 import Following from './following'
 import ArticlesView from '../article/articlesView'
 
+// main page structure
 const Main = () => (
     <div className="container">
         <div className="row">

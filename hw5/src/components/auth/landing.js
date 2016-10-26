@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Login from './login'
 import Register from './register'
 
+// promote messages
 let ErrorMessage = ({error, success}) => (
     <div className="row">
         { error.length == 0 ? '' :
@@ -32,6 +33,7 @@ ErrorMessage = connect((state) => {
     return { error: state.common.error, success: state.common.success }
 })(ErrorMessage)
 
+// landing page display structure
 const Landing = () => (
 
     <div>

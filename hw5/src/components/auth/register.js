@@ -14,6 +14,7 @@ class Register extends Component {
         }
     }
 
+    // register form
     render() { return (
         <div className="register-form-container">
             <h1>Registration</h1>

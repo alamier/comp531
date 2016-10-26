@@ -26,7 +26,8 @@ class Comment extends Component {
                              this.disabled = this.props.text == this.newMessage
                              this.forceUpdate()
                 }}/>
-                { this.props.username != this.props.author ? '' :
+                { // show the update button if current user is the author of the comment
+                    this.props.username != this.props.author ? '' :
                     <div className="media-right">
                     <span className="btn btn-primary"
                           title="Click the text to edit your comment"

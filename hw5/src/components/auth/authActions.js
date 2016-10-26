@@ -17,7 +17,7 @@ export function initialVisit() {
             dispatch(fetchFollowers())
             dispatch(fetchArticles())
         }).catch((err) => {
-            // that's okay
+            // do nothing
         })
     }
 }

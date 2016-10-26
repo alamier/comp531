@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 
 import Article from './article'
 import NewArticle from './newArticle'
-import { searchKeyword } from './articleActions'
 
 const ArticlesView = ({username, articles, dispatch}) =>(
     <div >
 
       <NewArticle/>
 
-      { articles.sort((a,b) => {
+      { // sort articles by date
+          articles.sort((a,b) => {
         if (a.date < b.date)
           return 1
         if (a.date > b.date)

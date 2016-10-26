@@ -37,6 +37,7 @@ class Avatar extends Component {
                     <em>Upload new profile avatar</em>
                     <input type="file" accept="image/*" onChange={(e) => this.handleImageChange(e)}/>
                 </div>
+                {/*if a new avatar file is uploaded*/}
             { !this.file ? '' :
                 <div>
                     <div className="row">

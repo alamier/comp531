@@ -16,6 +16,7 @@ class Article extends Component {
     this.newComment = ''
   }
 
+  //article display structure
   render() {
     const date = moment(new Date(this.props.date))
     return (
@@ -36,7 +37,8 @@ class Article extends Component {
               this.forceUpdate()
               }}/>
             </div>
-            {this.props.author == this.props.username ?
+            { // show the edit button if the author is the same as current user
+              this.props.author == this.props.username ?
                 <div>
                   <button className="card-button-3-left" onClick={() => {
                     this.hideComments = !this.hideComments
@@ -89,7 +91,8 @@ class Article extends Component {
                   </div>
             }
 
-            { this.hideComments ? '' : this.props.comments.sort((a,b) => {
+            { // logic for show/hide comments
+              this.hideComments ? '' : this.props.comments.sort((a,b) => {
               if (a.date < b.date)
                 return 1
               if (a.date > b.date)
