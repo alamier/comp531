@@ -1,0 +1,18 @@
+
+> starter@1.0.0 e2e:base /Users/zhou/Desktop/COMP531/hw6/frontend
+> mocha --opts e2e/mocha.opts e2e/*.spec.js "--reporter" "xunit"
+
+<testsuite name="Mocha Tests" tests="12" failures="0" errors="0" skipped="0" timestamp="Wed, 09 Nov 2016 05:35:25 GMT" time="31.664">
+<testcase classname="Test Frontend login" name="should successfully log in" time="0.523"/>
+<testcase classname="Test Frontend login" name="Should create a new article and validate article appears in feed" time="1.894"/>
+<testcase classname="Test Frontend login" name="Shoule edit an article and validate article appears in feed" time="1.82"/>
+<testcase classname="Test Frontend login" name="should update headline and verify change" time="2.397"/>
+<testcase classname="Test Frontend login" name="Should add &quot;Follower&quot; to the followed list and verify following count increases by one" time="1.708"/>
+<testcase classname="Test Frontend login" name="Should remove &quot;Follower&quot; from the followed list and verify following count decreases by one" time="1.087"/>
+<testcase classname="Test Frontend login" name="Should search for &quot;Only One Article Like This&quot;" time="2.292"/>
+<testcase classname="Test Frontend login" name="should update the users email" time="4.468"/>
+<testcase classname="Test Frontend login" name="should update the users zipcode" time="3.279"/>
+<testcase classname="Test Frontend login" name="should update the users password" time="2.797"/>
+<testcase classname="Test Registeration functionality" name="should register new user" time="1.923"/>
+<testcase classname="shutdown" name="now" time="0.12"/>
+</testsuite>
