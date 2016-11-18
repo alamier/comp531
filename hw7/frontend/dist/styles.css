@@ -1,0 +1,421 @@
+body {
+    background: #e9ebee;
+}
+.add-user-container {
+    margin-top: 20px;
+}
+.alert-button {
+    color: #fff;
+    background-color: #847778;
+    border-color: #204d74;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100%;
+}
+.alert-button:hover {
+    color: #fff;
+    background-color: #b33630;
+}
+
+.unfollow-button {
+    color: #fff;
+    background-color: #847778;
+    border-color: #204d74;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100%;
+}
+.unfollow-button:hover {
+    color: #fff;
+    background-color: #b33630;
+}
+
+.user-container {
+    border-bottom: 1px solid #ccd;
+    border-radius: 3px;
+    padding: 4px;
+}
+.user-container img {
+    width: 75px;
+    height: 75px;
+    border-radius: 5%;
+}
+.main-profile-container {
+    width: 150px;
+    margin-bottom: 15px;
+}
+.main-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+}
+.post-editor-container {
+    width: 500px;
+    margin-bottom: 15px;
+}
+.post-editor {
+    width: 100%;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+.clear {
+    clear: both;
+}
+.input-text {
+    width: 100%;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.navbar {
+    background-color: #004080;
+    color: #fff;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.card-button-3-left {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    border-right: 1px solid #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 33%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button-3-mid {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    border-right: 1px solid #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 34%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.newPostBody{
+    width: 500px;
+}
+
+.card-button-3-right {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 33%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+
+.card-button-2 {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    border-right: 1px solid #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 50%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button-2-right {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 50%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button-mid {
+    /*float: left;*/
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    border-right: 1px solid #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 33.3%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button-right {
+    float: right;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 33%;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button {
+    float: left;
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: auto;
+    height: 31px;
+    margin-top: 0px;
+    display: block;
+}
+
+.card-button-left:hover,.card-button-right:hover {
+    background-color: #0d95fc;
+}
+
+#card-table td div {
+    box-shadow: 7px 15px 20px 0px #777;
+}
+
+#card-table tr {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#card-table td div img {
+    width: 100%;
+    height: 300px;
+}
+
+.img-card {
+    width: 500px;
+}
+
+.img-card-image{
+    width: 500px;
+}
+
+.comment-container{
+    background: white;
+    border: 1px solid darkslategrey;
+    padding: 5px;
+}
+
+.newPostText{
+    width: 500px;
+}
+
+.article-continer{
+    border: 1px solid darkslategrey;
+    width: 502px;
+    margin-top: 20px;
+    background: white;
+}
+
+.article-author-container {
+    width: 500px;
+}
+
+.article-author-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 3px 6px;
+}
+
+#change-info-container {
+    border: 2px solid #eee;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: green;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.card-text {
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-input-text {
+    width: 100%;
+}
+
+.profile-container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile-table {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 7px 15px 20px 0px #777;
+}
+
+#profile-table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+a {
+    display: block;
+}
+
+#show-result {
+    margin-top: 20px;
+    width: 100%;
+    color: red;
+}
+
+.primary-button {
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 5px;
+}
+.primary-button:hover {
+    background-color: #0d95fc;
+}
+
+#log-email-info, #log-password-info {
+    color: red;
+}
+.menubar-right-container {
+    float: right;
+    color: white;
+    text-align: left;
+    padding-bottom: 14px;
+}
+.menubar-right-container input, button{
+    color: black;
+}
+.menubar-content-container {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menubar-left-container {
+    float: left;
+}
+.site-name {
+    color: white;
+}
+.menubar-container {
+    height: 82px;
+    min-width: 980px;
+    background: #004080;
+}
+.register-image-container {
+    float: left;
+    width: 500px;
+}
+.register-image {
+    width:500px;
+    height: 295px;
+}
+.primary-button {
+    color:#fff;
+    background-color: #286090;
+    border-color: #204d74;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+.primary-button:hover {
+    background-color: #0d95fc;
+}
+.form-text-input {
+    width: 350px;
+    padding: 9px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 0;
+}
+.span-alert {
+    color:red;
+    font:normal 0.6em Arial;
+}
+.main-container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.register-form-container {
+    float: right;
+    width: 350px;
+    padding: 0px;
+    border: 0px;
+    text-align: left;
+}
+.form-text-title {
+    font:bold 1.5em "Open Sans";
+}
+.clear-button {
+    color: #900;
+    background-color: #eee;
+    border-color: #204d74;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+.clear-button:hover {
+    color: #fff;
+    background-color: #b33630;
+}
+.menubar-container{
+    margin-top: -20px;
+}
