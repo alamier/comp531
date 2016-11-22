@@ -33,4 +33,3 @@ var articleSchema = new mongoose.Schema({
 exports.User = mongoose.model('User', userSchema)
 exports.Profile = mongoose.model('Profile', profileSchema)
 exports.Article = mongoose.model('Article', articleSchema)
-// exports.Comment = mongoose.model('Comment', commentSchema)

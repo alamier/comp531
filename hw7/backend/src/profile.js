@@ -150,8 +150,6 @@ const getDob = (req, res) => {
             res.status(200).send({username:profile.username,dob:Date.parse(profile.dob)})
         }
     })
-    // const dob = username===defaultProfile.username ? defaultProfile.dob: Date.parse("2016-11-01")
-    // res.status(200).send({username,dob})
 }
 
 

@@ -225,5 +225,7 @@ module.exports = app => {
 
 	app.put('/logout', isLoggedIn, logout)
 	app.put('/password', isLoggedIn, putPassword)
+	//put auth.js before other js files in the index.js file
+	//to ensure that isLoggedIn is applied to all other routes
 	app.use(isLoggedIn)
 }

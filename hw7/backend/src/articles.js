@@ -1,6 +1,6 @@
 var models = require('./model.js')
 var Article = models.Article
-// var Comment = models.Comment
+
 const md5 = require('md5')
 
 
@@ -63,12 +63,6 @@ const updateArticle = (req, res) => {
             if(req.body.commentId === -1){
                 console.log("[updateArticle] create new comment")
                 var commentId = md5(req.username + new Date().getTime())
-                // const newComment = new Comment({
-                //     commentId:commentId,
-                //     author: req.username,
-                //     text: req.body.text,
-                //     date: new Date()
-                // })
                 const newComment = {
                     commentId:commentId,
                     author: req.username,
@@ -76,49 +70,17 @@ const updateArticle = (req, res) => {
                     date: new Date()
                 }
 
-                        Article.findByIdAndUpdate(req.params.id,
-                            {$addToSet: {comments:newComment}},{new:true},(err, article) => {
-                                if(err){
-                                    console.log("[updateArticle] " + err)
-                                    res.status(400).send(err)
-                                }else{
-                                    res.status(200).send({articles:[article]})
-                                }
-                        })
+                Article.findByIdAndUpdate(req.params.id,
+                    {$addToSet: {comments:newComment}},{new:true},(err, article) => {
+                            if(err){
+                                console.log("[updateArticle] " + err)
+                                res.status(400).send(err)
+                            }else{
+                                res.status(200).send({articles:[article]})
+                            }
+                    })
             }else{
                 console.log("[updateArticle] update a comment")
-                // Comment.findOne({commentId:req.body.commentId}, (err, comment) => {
-                //     if(err){
-                //         console.log("[updateArticle] " + err)
-                //         res.status(400).send(err)
-                //     }else{
-                //         if(!comment){
-                //             res.status(400).send("No comment of this id found!")
-                //             return
-                //         }
-                //         if(comment.author !== req.username){
-                //             res.status(401).send("You are not the author!")
-                //             return
-                //         }else{
-                //             Comment.findOneAndUpdate({commentId:req.body.commentId},
-                //                 {$set:{text: req.body.text}},{new:true}, (err,comment) => {
-                //                     if(err){
-                //                         console.log("[updateArticle] " + err)
-                //                         res.status(400).send(err)
-                //                     }else{
-                //                         Article.findById(req.params.id, (err,article) => {
-                //                             if(err){
-                //                                 console.log("[updateArticle] " + err)
-                //                                 res.status(400).send(err)
-                //                             }else{
-                //                                 res.status(200).send({articles:[article]})
-                //                             }
-                //                         })
-                //                     }
-                //             })
-                //         }
-                //     }
-                // })
                 Article.findById(req.params.id,(err, article) => {
                     if(err){
                         console.log("[updateArticle] " + err)
