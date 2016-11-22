@@ -11,6 +11,7 @@ class Register extends Component {
     componentDidUpdate() {
         if (this.props.error.length == 0) {
             this.email.value = null
+            this.dob.value = null
             this.zipcode.value = null
             this.password.value = null
             this.pwconf.value = null
@@ -26,6 +27,7 @@ class Register extends Component {
                 const payload = {
                     username:this.username.value,
                     email:this.email.value,
+                    dob:this.dob.value,
                     zipcode:this.zipcode.value,
                     password:this.password.value,
                     pwconf:this.pwconf.value
@@ -36,6 +38,10 @@ class Register extends Component {
                 <input className="form-text-input" type="text" id="username" ref={(node) => this.username = node } placeholder="Your User name" required/>
                 <p className="form-text-title">Email Address <span className="span-alert">*</span></p>
                 <input className="form-text-input" type="email" id="email" ref={(node) => this.email = node } placeholder="Email" required/>
+
+                <p className="form-text-title">Date of Birth <span className="span-alert">*</span></p>
+                <input className="form-text-input" type="date" id="dob" ref={(node) => this.dob = node } required/>
+
                 <p className="form-text-title">Zipcode <span className="span-alert">*</span></p>
                 <input className="form-text-input" type="text" id="zipcode" ref={(node) => this.zipcode = node } placeholder="12345 or 12345-1234" required pattern="^\d{5}(-\d{4})?"/>
                 <p className="form-text-title">Password <span className="span-alert">*</span></p>

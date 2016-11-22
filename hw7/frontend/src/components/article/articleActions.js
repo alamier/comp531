@@ -32,12 +32,29 @@ export function fetchArticles() {
     }
 }
 
+
+/*Note that our POST /article endpoint will only be accepting text at the current moment. 
+I.e., no picture uploads. Therefore the frontend application needs to be modified to not send formData.
+For example, if we already had a method addArticle then we would rename it addArticleWithImage and make a new addArticle.
+This way we can easily switch back to the formData upload for the final assignment when image uploading is 
+enabled on the backend.*/
+// export function uploadArticle(message, file) {
+//     return (dispatch) => {
+//         const fd = new window.FormData()
+//         fd.append('text', message)
+//         fd.append('image', file)
+//         resource('POST', 'article', fd, false)
+//         .then((response) => {
+//             const article = response.articles[0]
+//             dispatch({ type: Action.ADD_ARTICLE, article})
+//         })
+//     }
+// }
 export function uploadArticle(message, file) {
     return (dispatch) => {
-        const fd = new window.FormData()
-        fd.append('text', message)
-        fd.append('image', file)
-        resource('POST', 'article', fd, false)
+        const payload = {text:message}
+        console.log("[uploadArticle] payload: " + payload)
+        resource('POST', 'article', payload)
         .then((response) => {
             const article = response.articles[0]
             dispatch({ type: Action.ADD_ARTICLE, article})

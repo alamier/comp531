@@ -47,9 +47,9 @@ export function logout() {
     }
 }
 
-export function register({username, email, zipcode, password, pwconf}) {
+export function register({username, email, dob, zipcode, password, pwconf}) {
     return (dispatch) => {
-        if (!username || !email || !zipcode || !password || !pwconf) {
+        if (!username || !email || !dob || !zipcode || !password || !pwconf) {
             return dispatch(updateError('All fields must be supplied'))
         }
 
@@ -58,7 +58,7 @@ export function register({username, email, zipcode, password, pwconf}) {
             return dispatch(updateError(err))
         }
 
-        resource('POST', 'register', {username, email, zipcode, password})
+        resource('POST', 'register', {username, email, dob, zipcode, password})
         .then((response) => {
             return dispatch(updateSuccess(`Success!  You can now log in as "${response.username}".`))
         }).catch((err) => {
