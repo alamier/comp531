@@ -3,8 +3,8 @@
  */
 import fetch from 'isomorphic-fetch'
 
-const isLocal = true
-export const apiUrl = isLocal ? 'http://localhost:3000' : 'https://webdev-dummy.herokuapp.com'
+const isLocal = false
+export const apiUrl = isLocal ? 'http://localhost:3000' : 'https://zlhw7server.herokuapp.com'
 
 // Action enum
 const Action = {
