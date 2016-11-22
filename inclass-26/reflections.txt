@@ -1,0 +1,20 @@
+1.What did you hope to learn but did not?
+Some CSS tricks.
+
+2.What did you really enjoy learning about?
+Writing the JavaScript game.
+
+3.What worked well in the course? and how?
+The lectures are pretty good, they are in good style and provide plenty of resources for father study.
+
+4.What did not work well in the course and how might it be improved?
+Learning about the tests, the tests we wrote in class are straightforward  but the tests we need to write
+in assignments are complicated.
+
+5.What could I have done to help you more, presentation of material, design of in class
+exercises, goals of projects – and be specific please!
+Homework 5 Front-End App is challenging, there are a lot of tests to write, some kinds of the test we have not 
+seen in class. So it would be good to cover more kinds of tests in class before homework 5.
+
+6.Anything else you like to say?
+This class is challenging, but fortunately we got a dedicated professor.
