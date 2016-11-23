@@ -42,7 +42,8 @@ class NewArticle extends Component {
             <div className="row">
                 <div className="col-sm-5">
                     Add a picture
-                    <input type="file" id="articleImage" accept="image/*" onChange={(e) => this.handleImageChange(e)}/>
+                    <input type="file" id="articleImage" accept="image/*" 
+                    onChange={(e) => this.handleImageChange(e)}/>
                 </div>
             { !this.file && !this.message ? '' :
                 <div className="col-sm-2">

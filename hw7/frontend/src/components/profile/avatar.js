@@ -49,7 +49,8 @@ class Avatar extends Component {
                     <div>
                         { this.file.webkitRelativePath || this.file.name } ({ parseInt(this.file.size / 1024 * 100)/100.0 } kB)
                     </div>
-                    <input className="btn btn-primary" type="button" value="Upload" onClick={() => { this.props.dispatch(uploadImage(this.file)) }}/>
+                    <input className="btn btn-primary" type="button" value="Upload" 
+                    onClick={() => { this.props.dispatch(uploadImage(this.file)) }}/>
                 </div>
             }
             </div>

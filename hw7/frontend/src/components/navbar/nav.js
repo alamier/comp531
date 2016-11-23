@@ -27,10 +27,12 @@ const Nav = ({username, onProfile, dispatch}) => {
                                     // if user is on profile page
                                     onProfile ? '' :
                                         <li className="dropdown">
-                                            <a id="searchMenuButton" href="#" className="dropdown-toggle" data-toggle="dropdown"><i
+                                            <a id="searchMenuButton" href="#" className="dropdown-toggle"
+                                             data-toggle="dropdown"><i
                                                 className="glyphicon glyphicon-search"></i></a>
                                             <ul className="dropdown-menu">
-                                                <li><input id="searchInput" className="input-text" type="text" placeholder="search your feed"
+                                                <li><input id="searchInput" className="input-text" type="text" 
+                                                placeholder="search your feed"
                                                            ref={(node) => keyword = node }
                                                            onChange={() => {
                                                                dispatch(searchKeyword(keyword.value))
@@ -41,7 +43,8 @@ const Nav = ({username, onProfile, dispatch}) => {
                                 }
 
                                 <li className="dropdown">
-                                    <a id="profileMenuButton" href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                    <a id="profileMenuButton" href="#" className="dropdown-toggle" 
+                                    data-toggle="dropdown">
                                         <i className="glyphicon glyphicon-user"></i>
                                         <i className="glyphicon glyphicon-chevron-down"></i>
                                     </a>

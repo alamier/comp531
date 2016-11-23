@@ -13,7 +13,8 @@ const Follower = ({name, avatar, headline, dispatch}) => (
             <img src={ avatar }/>
                 <h4>{name}</h4>
                 <p>{headline}</p>
-                <button className="unfollow-button" onClick={() => { dispatch(delFollower(name)) }}>Unfollow</button>
+                <button className="unfollow-button" 
+                onClick={() => { dispatch(delFollower(name)) }}>Unfollow</button>
         </div>
     </div>
 )

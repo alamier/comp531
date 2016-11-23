@@ -36,7 +36,8 @@ class Comment extends Component {
                           title="Click the text to edit your comment"
                           disabled={ this.disabled }
                           onClick={() => {
-                              this.props.dispatch(editArticle(this.props.articleId, this.newMessage, this.props.commentId))
+                              this.props.dispatch(editArticle(this.props.articleId, this.newMessage, 
+                                this.props.commentId))
                               this.disabled = true
                           }}>
                         Update comment

@@ -35,15 +35,18 @@ class Register extends Component {
                 this.props.dispatch(register(payload))
             }}>
                 <p className="form-text-title">User Name <span className="span-alert">*</span></p>
-                <input className="form-text-input" type="text" id="username" ref={(node) => this.username = node } placeholder="Your User name" required/>
+                <input className="form-text-input" type="text" id="username" ref={(node) => this.username = node } 
+                placeholder="Your User name" required/>
                 <p className="form-text-title">Email Address <span className="span-alert">*</span></p>
-                <input className="form-text-input" type="email" id="email" ref={(node) => this.email = node } placeholder="Email" required/>
+                <input className="form-text-input" type="email" id="email" ref={(node) => this.email = node } 
+                placeholder="Email" required/>
 
                 <p className="form-text-title">Date of Birth <span className="span-alert">*</span></p>
                 <input className="form-text-input" type="date" id="dob" ref={(node) => this.dob = node } required/>
 
                 <p className="form-text-title">Zipcode <span className="span-alert">*</span></p>
-                <input className="form-text-input" type="text" id="zipcode" ref={(node) => this.zipcode = node } placeholder="12345 or 12345-1234" required pattern="^\d{5}(-\d{4})?"/>
+                <input className="form-text-input" type="text" id="zipcode" ref={(node) => this.zipcode = node } 
+                placeholder="12345 or 12345-1234" required pattern="^\d{5}(-\d{4})?"/>
                 <p className="form-text-title">Password <span className="span-alert">*</span></p>
                 <input className="form-text-input" type="password" id="password" ref={(node) => this.password = node } required/>
                 <p className="form-text-title">Password Confirmation <span id="passwordCheck" className="span-alert">*</span></p>
