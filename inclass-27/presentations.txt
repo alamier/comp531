@@ -1,0 +1,28 @@
+1. Which presentation was the most polished and delivered, and why?
+chao zhou,hybrid mobile apps.
+His speech speed is good and easy to understand. At the beganning of the presentation, he gave a clear statement
+what hybrid mobile apps and why we want to use them. It's because hybrid mobile apps make it possible to embed HTML5 
+apps inside a thin native container, combining the best (and worst) elements of native and HTML5 apps. Then 
+he showed how a hybrid mobile app works. Application assets like HTML, CSS, JavaScript are packaged through the tooling
+made available through Apache Cordova to target platform SDKs. Once built, you have an application that can run like any 
+other kind of application on the device. He has also written some actual code to show how hybrid mobile apps are organized.
+
+2. Which topic did you learn the most from and what did you learn?
+prakhar doshi,progressive web apps.
+I learned:
+a. What web can do today?
+	he presented a good chart that shows clearly all the areas where web can be used.
+	For example, behave like native app, multiple input, access what's around, access device features.
+b. Why Progressive Web Apps are better than hybrid mobile apps?
+	low friction of distribution, if your progressive web app is online, it’s already accessible for 
+	Android (and other mobile) users.
+	Better user experience because it is always fresh.
+	large data savings, extremely important in emerging markets with expensive and/or slow Internet access.
+
+3. Which talk did you like the best and why?
+lu jocelyn han,reflectjs
+I have heard about reflect.js a lot but never got a chance to learn it myself. lu's talk answered one of my biggest
+question about reflect.js, that is what's the relationship between it and Database sytem. Though her talk, I understood that
+Reflect lets developers build engaging dashboards, reports, and views of data in their databases without having to worry about 
+building and scaling complex data visualization infrastructure and libraries. So Reflect can be used for any web applications as
+long as it use database.
