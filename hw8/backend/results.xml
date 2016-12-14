@@ -1,0 +1,20 @@
+
+> RiceBookServer@0.0.0 test /Users/zhou/Desktop/COMP531/hw6/backend
+> mocha --opts mocha.opts src/**/*.spec.js "-R" "xunit"
+
+<testsuite name="Mocha Tests" tests="14" failures="0" errors="0" skipped="0" timestamp="Tue, 08 Nov 2016 09:50:13 GMT" time="0.083">
+<testcase classname="Validate Article functionality" name="should give me three or more articles" time="0.026"/>
+<testcase classname="Validate Article functionality" name="should add a new article" time="0.008"/>
+<testcase classname="Validate Article functionality" name="should return an article with a specified id" time="0.002"/>
+<testcase classname="Validate Article functionality" name="should return ID not found" time="0.005"/>
+<testcase classname="Validate Article functionality" name="should return nothing for an invalid id " time="0.004"/>
+<testcase classname="Validate Article functionality" name="should update the article" time="0.003"/>
+<testcase classname="Validate Auth functionality" name="should register a new user" time="0.004"/>
+<testcase classname="Validate Auth functionality" name="should login a previously registered user" time="0.004"/>
+<testcase classname="Validate Auth functionality" name="should return Missing username or password!" time="0.003"/>
+<testcase classname="Validate Auth functionality" name="should return User doesn't exist!" time="0.003"/>
+<testcase classname="Validate Auth functionality" name="should return Incorrect username or password!" time="0.002"/>
+<testcase classname="Validate Auth functionality" name="should logout" time="0.003"/>
+<testcase classname="Validate following functionality" name="should show following list" time="0.003"/>
+<testcase classname="Unit test to validate PUT /headline" name="should updates the headline message," time="0.003"/>
+</testsuite>
