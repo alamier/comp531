@@ -1,0 +1,33 @@
+1. Which presentation was the most polished and delivered, and why?
+wuyang chen,webRTC
+My undergraduate graduate project is about webRTC so I have a fairly good understanding of the basics of webRTC.
+Wuyang did give a great talk on webRTC. His speech is fluent and easy to follow  his talk covered the baisc ideas
+of how webRTC provides browsers and mobile applications with Real-Time Communications capabilities iva simple APIs. 
+He also has given a simple demoof WebRTC.
+
+2. Which topic did you learn the most from and what did you learn?
+chunxiao zhang,redis vs memcached
+I learned:
+a. Why we need Redis or Memcached?
+	In scenarios like login, register, search and profile modification. We can use caching mechanism to help us scale
+	the application.
+b. What is Memcached?
+	Volatile memory key-value database, caching small chunks of data(string or objects).
+c. What is Redis?
+	Remote dictionary server, data structure server, in memory dataset that can be persistence.
+d. What are the commons and differences of Memcached and Redis?
+   commons: NoSQL in-memory database, high-performance in-memory database service, store key- value mapping in memory.
+   differences: for storage, Memcached use strings while redis use objects
+   				for persistence, Memcached store data in RAM, Redis provide persistence data storage by snapshot or AOF
+   				distributed system, Memcached itself does not support distributed system, while Redis build the distributed
+   				system storage on the server side.
+
+
+3. Which talk did you like the best and why?
+pengyu li,web crawlers
+My internship in Institute for Interdisciplinary Information Sciences, Tsinghua University is about natural 
+language process and I knew the importance of getting a good dataset. I was using wikidumps but I thought there may
+be a better way to get the data. Pengyu's topic about web crawler and big data is great and inspired me that WWW is
+the sea of data and web crawling or scraping is an effective way to get the data. Crawling AJAX Rendered page is not
+easy and Penyu gave us two solutions in the talk, one is simulation, just like end-to-end test; the other one is to 
+analyze the request and response packages. Find AJAX request and directly request data from certain url.
